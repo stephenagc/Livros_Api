@@ -1,0 +1,32 @@
+### Listar todos os livros
+GET http://localhost:8080/livros
+
+### Consultar livro por ID
+GET http://localhost:8080/livros/1
+
+### Cadastrar livro
+POST http://localhost:8080/livros
+Content-Type: application/json
+
+{
+  "titulo": "A Sociedade do Anel",
+  "autor": "J. R. R. Tolkien",
+  "genero": "FANTASIA",
+  "anoPublicacao": 1954,
+  "statusLeitura": "NAO_LIDO"
+}
+
+### Atualizar livro
+PUT http://localhost:8080/livros/1
+Content-Type: application/json
+
+{
+  "titulo": "O Hobbit",
+  "autor": "J. R. R. Tolkien",
+  "genero": "FANTASIA",
+  "anoPublicacao": 1937,
+  "statusLeitura": "LIDO"
+}
+
+### Excluir livro
+DELETE http://localhost:8080/livros/1
